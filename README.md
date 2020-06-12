@@ -1,11 +1,11 @@
 ## Spring Boot + Okta + PKCE
 
-This app demonstrates integrating an Okta OpenID Connect application with Spring Boot.
+This app was created based on code of official OKTA example
+https://github.com/oktadeveloper/okta-spring-boot-oauth2-pkce-example
 
-You can deploy directly to Heroku and provision an Okta org at the same time!
+It has the following improvements:
+- App works as public client
+- Possibility to get accessToken (for testing purposes)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-The app is already configured to integrate with your new Okta org.
-
-When you click the purple button above, you'll give the app a unique name to run in Heroku.
+http://localhost:4200

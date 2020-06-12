@@ -23,7 +23,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr th:each="claim : ${user.userInfo.claims}">
+                            <tr th:each="claim : ${user.idToken.claims}">
                                 <td th:text="${claim.key}">key</td>
                                 <td th:text="${claim.value}">value</td>
                             </tr>

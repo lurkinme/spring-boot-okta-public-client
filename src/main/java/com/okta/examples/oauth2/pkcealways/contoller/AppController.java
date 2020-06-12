@@ -1,5 +1,6 @@
 package com.okta.examples.oauth2.pkcealways.contoller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Controller;
@@ -8,6 +9,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class AppController {
+
+    @Autowired
+    AppService appService;
 
     @GetMapping("/")
     public String home() {
@@ -21,4 +25,13 @@ public class AppController {
         mav.setViewName("profile");
         return mav;
     }
+
+    @GetMapping("/accessToken")
+    public ModelAndView accessToken() {
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("accessToken", appService.getAccessToken());
+        mav.setViewName("token");
+        return mav;
+    }
+
 }

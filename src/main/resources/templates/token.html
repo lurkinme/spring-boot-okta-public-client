@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--/*/ <th:block th:include="fragments/fragments :: header"/> /*/-->
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-lg">
+            <img src="/img/okta-dev-logo.png">
+        </div>
+        <div class="col-sm"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <textarea style="height: 300px" class="form-control" th:text="${accessToken}"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg text-center">
+            <a class="btn btn-primary" href="/">Home</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
